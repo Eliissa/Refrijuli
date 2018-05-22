@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+    <title>Inventario de Insumos</title>
+    <link rel="stylesheet" href="Elisa/Css/Mycss.css">
+
+
+</head>
+<body >
+
+<nav class="nav nav-pills nav-justified" >
+    <a class="nav-link " href="#"><h4>Mi Perfil</h4></a>
+    <a class="nav-link" href="Usuario.html"><h4>Inicio</h4></a>
+    <a class="nav-link" href="insumos.html"><h4>Ingreso de Insumo</h4></a>
+    <a class="nav-link disabled" href="index.html"><h4>Salir</h4></a>
+</nav>
+
+
+<br>
+
+<div class="container-fluid ">
+
+
+    <div class="row">
+
+        <div class="col-md-3">
+
+            <form class="form-horizontal" id="myForm"  action="/action_page.php">
+
+                <fieldset>
+                    <br>
+                    <!-- Select Basic -->
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label class="col-md-12 control-label" for="usuario">Usuario:</label>
+                            </div>
+                            <div class="col-md-6">
+                                <select id="usuario" name="usuario" class="form-control">
+                                    <option value="1">Empleado1</option>
+                                    <option value="2">Empleado2</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label class="col-md-12 control-label" for="fechaIngreso">Fecha ingreso:</label>
+                            </div>
+                            <div class="col-md-5">
+                                <input type="date" name="date" id="fechaIngreso">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Select Basic -->
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label class="col-md-4 control-label" for="componente">Insumo:</label>
+                            </div>
+                            <div class="col-md-6">
+                                <select id="componente" name="selectbasic" class="form-control">
+                                    <option value="1">Option one</option>
+                                    <option value="2">Option two</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label class="col-md-4 control-label" for="fechaCaducidad">Fecha caducidad:</label>
+                            </div>
+                            <div class="col-md-5">
+                                <input type="date" name="date" id="fechaCaducidad">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label class="col-md-4 control-label" for="cantidad">Cantidad:</label>
+                            </div>
+                            <div class="col-md-7">
+                                <input id="cantidad" name="textinput" type="text" placeholder="" class="form-control input-md" required="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Select Basic -->
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <label class="col-md-4 control-label" for="unidad">Unidad:</label>
+                            </div>
+                            <div class="col-md-6">
+                                <select id="unidad" name="selectbasic" class="form-control">
+                                    <option value="1">g</option>
+                                    <option value="2">Kg</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Select Basic -->
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <label class="col-md-12 control-label" for="presentacion">Presentación:</label>
+                            </div>
+
+                            <div class="col-md-6">
+                                <select id="presentacion" name="selectbasic" class="form-control">
+                                    <option value="1">envase x 1 kg</option>
+                                    <option value="2">envase x 20 kg</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Select Basic -->
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label class="col-md-12 control-label" for="categoria">Categoria:</label>
+                            </div>
+
+                            <div class="col-md-7">
+                                <select id="categoria" name="selectbasic" class="form-control">
+                                    <option value="1">2</option>
+                                    <option value="2">2</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Select Basic -->
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label class="col-md-4 control-label" for="movimiento">Movimiento:</label>
+                            </div>
+                            <div class="col-md-7">
+                                <select id="movimiento" name="selectbasic" class="form-control">
+                                    <option value="1">Entrada</option>
+                                    <option value="2">Salida</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label class="col-md-4 control-label" for="precioCompra">Precio compra:</label>
+                            </div>
+                            <div class="col-md-7">
+                                <input id="precioCompra" name="textinput" type="text" placeholder="" class="form-control input-md" required="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Buttons -->
+                    <div class="form-group" align="center">
+                        <button id="button1id" name="button1id" onclick="Registrar()" type="button" class="btn btn-primary">Guardar</button>
+                        <button id="button2id" name="button2id" type="button" class="btn btn-primary">Actualizar</button>
+                        <button id="button3id" name="button3id" type="button" class="btn btn-primary">Eliminar</button>
+
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+
+        <!-- Tabla -->
+
+
+        <div class="col-md-9">
+            <fieldset id="tabla">
+            <table class="table" id="userTable">
+                <thead>
+                <tr>
+                    <th>Usuario</th>
+                    <th>Fecha ingreso</th>
+                    <th>Insumo</th>
+                    <th>Fecha caducidad</th>
+                    <th>Cantidad</th>
+                    <th>Unidad</th>
+                    <th>Precentación</th>
+                    <th>Categoria</th>
+                    <th>Movimiento</th>
+                    <th>Precio compra</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+            </fieldset>
+        </div>
+
+    </div>
+
+</div>
+</div>
+
+
+<!-- Optional JavaScript -->
+<script src="Elisa/Js/ingreso.js"></script>
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+<script src="jsProyec/jsIngreso.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+</body>
+</html>

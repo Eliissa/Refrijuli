@@ -1,0 +1,21 @@
+#pass{
+    /* Old browsers */
+    background: -moz-linear-gradient(45deg, #000000 0%, #000000 100%);
+
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg, #000000 0%, #000000 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: -o-linear-gradient(45deg, #000000 0%, #000000 100%);
+    background-image: url("http://us.media.fashionnetwork.com/m/9426/68cd/15fb/d68f/96b9/75d8/a419/7d8b/f3df/ce20/ce20.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+input{
+    background-color: whitesmoke;
+}
+form{
+
+    background-color: rgba(255, 128, 111, 0.8);
+}

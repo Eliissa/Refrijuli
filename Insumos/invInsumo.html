@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../Elisa/Css/Mycss.css">
+    <link rel="stylesheet" href="jsProyec/cssInsumo.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <!--formden.js communicates with FormDen server to validate fields and submit via AJAX -->
+    <script type="text/javascript" src="https://formden.com/static/cdn/formden.js"></script>
+
+    <!-- Special version of Bootstrap that is isolated to content wrapped in .bootstrap-iso -->
+    <link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
+
+    <!--Font Awesome (added because you use icons in your prepend/append)-->
+    <link rel="stylesheet" href="https://formden.com/static/cdn/font-awesome/4.4.0/css/font-awesome.min.css" />
+
+    <!-- Inline CSS based on choices in "Settings" tab -->
+    <style>.bootstrap-iso .formden_header h2, .bootstrap-iso .formden_header p, .bootstrap-iso form{font-family: Arial, Helvetica, sans-serif; color: black}.bootstrap-iso form button, .bootstrap-iso form button:hover{color: white !important;} .asteriskField{color: red;}</style>
+
+
+
+    <title>Inventario de Insumos</title>
+
+
+
+</head>
+
+<body onload="cargarTabla()" id="body">
+
+<nav class="nav nav-pills nav-justified" >
+    <a class="nav-link " href="#"><h4>Mi Perfil</h4></a>
+    <a class="nav-link" href="Usuario.html"><h4>Inicio</h4></a>
+
+    <a class="nav-link disabled" href="index.html"><h4>Salir</h4></a>
+</nav>
+
+
+<br>
+
+
+    <div class="container-fluid ">
+
+        <div class="row">
+            <div class="col-md-12">
+                <legend>Ingreso de Insumo</legend>
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-3">
+
+                <form class="form-horizontal" id="myForm" action="https://formden.com/post/MlKtmY4x/" >
+
+                    <fieldset class="border">
+
+                        <!-- Select Basic -->
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <label class="col-md-12 control-label" for="usuario" id="label1">Usuario:</label>
+                                </div>
+                                <div class="col-md-7">
+                                    <select id="usuario" name="usuario" class="form-control">
+                                        <option >Empleado1</option>
+                                        <option >Empleado2</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- date -->
+                        <div class="form-group" >
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <label class="col-md-4 control-label" for="fechaIngreso" id=>Fecha ingreso:</label>
+                                </div>
+                                <div class="col-md-7">
+                                    <input type="date" name="date" id="fechaIngreso">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Select Basic -->
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <label class="col-md-4 control-label" for="componente">Insumo:</label>
+                                </div>
+                                <div class="col-md-7">
+                                    <select id="componente" name="selectbasic" class="form-control">
+                                        <option value="1">Option one</option>
+                                        <option value="2">Option two</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- date input-->
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <label class="col-md-4 control-label" for="fechaCaducidad">Fecha caducidad:</label>
+                                </div>
+                                <div class="col-md-7">
+                                    <input type="date" name="date" id="fechaCaducidad">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Text input-->
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <label class="col-md-4 control-label" for="cantidad">Cantidad:</label>
+                                </div>
+                                <div class="col-md-7">
+                                    <input id="cantidad" name="textinput" type="text" placeholder="" class="form-control input-md" required="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Select Basic -->
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <label class="col-md-4 control-label" for="unidad">Unidad:</label>
+                                </div>
+                                <div class="col-md-7">
+                                    <select id="unidad" name="selectbasic" class="form-control">
+                                        <option >g</option>
+                                        <option >Kg</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Select Basic -->
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <label class="col-md-12 control-label" for="presentacion">Presentación:</label>
+                                </div>
+
+                                <div class="col-md-7">
+                                    <select id="presentacion" name="selectbasic" class="form-control">
+                                        <option >envase x 1 kg</option>
+                                        <option >envase x 20 kg</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Select Basic -->
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <label class="col-md-12 control-label" for="categoria">Categoria:</label>
+                                </div>
+                                <div class="col-md-7">
+                                    <select id="categoria" name="selectbasic" class="form-control">
+                                        <option >1</option>
+                                        <option >2</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Select Basic -->
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <label class="col-md-4 control-label" for="movimiento">Movimiento:</label>
+                                </div>
+                                <div class="col-md-7">
+                                    <select id="movimiento" name="selectbasic" class="form-control">
+                                        <option >Entrada</option>
+                                        <option >Salida</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Text input-->
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <label class="col-md-4 control-label" for="precioCompra">Precio compra:</label>
+                                </div>
+                                <div class="col-md-7">
+                                    <input id="precioCompra" name="textinput" type="text" placeholder="" class="form-control input-md" required="">
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+
+            <!-- tabla -->
+            <div class="col-md-9">
+                <table class="table" id="userTable">
+                    <thead>
+                    <tr>
+                        <th>Usuario</th>
+                        <th>Fecha ingreso</th>
+                        <th>Insumo</th>
+                        <th>Fecha caducidad</th>
+                        <th>Cantidad</th>
+                        <th>Unidad</th>
+                        <th>Precentación</th>
+                        <th>Categoria</th>
+                        <th>Movimiento</th>
+                        <th>Precio compra</th>
+                    </tr>
+                    </thead>
+                    <tbody id="userTableBody"></tbody>
+                </table>
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <!-- Buttons -->
+            <div class="col-md-12">
+                <button id="button1id" name="button1id" onclick="Registrar()" type="button" class="btn btn-primary">Guardar</button>
+                <button id="button2id" name="button2id" type="button" class="btn btn-primary">Actualizar</button>
+                <button id="button3id" name="button3id" type="button" class="btn btn-primary">Eliminar</button>
+                <button id="button4id" name="button4id" type="button" class="btn btn-primary">Nuevo</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Optional JavaScript -->
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <script src="jsProyec/jsIngreso.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <!-- Extra JavaScript/CSS added manually in "Settings" tab -->
+    <!-- Include jQuery -->
+<script src="jsProyec/jsIngreso.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+    <!-- Include Date Range Picker -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+
+
+</body>
+</html>

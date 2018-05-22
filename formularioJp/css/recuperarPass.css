@@ -1,0 +1,39 @@
+body{
+    /* Old browsers */
+    background: -moz-linear-gradient(45deg, #000000 0%, #000000 100%);
+
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg, #000000 0%, #000000 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: -o-linear-gradient(45deg, #000000 0%, #000000 100%);
+    background-image: url("https://besthqwallpapers.com/Uploads/16-5-2018/52964/thumb2-chocolate-ice-cream-confetti-holiday-dessert-birthday-concepts.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+#titu{
+    color: #49C9F6;
+}
+#bon1{
+    background-color: #9D0AA8;
+    color: whitesmoke;
+}
+#bon2{
+    background-color: #9D0AA8;
+    color: whitesmoke;
+}
+
+fieldset {
+    border:1px solid #999;
+    border-radius:8px;
+    box-shadow:0 0 10px #999;
+    background-color: whitesmoke;
+}
+legend {
+    background:#fff;
+}
+#corrcent{
+    margin-left: auto;
+    margin-right: auto;
+}

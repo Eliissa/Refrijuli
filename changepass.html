@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="formularioJp/css/recuperarPass.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+    <title>Formulario Recuperar contraseña</title>
+
+    <!-- El js que contiene la función del formulario Jp Sena -->
+    <script src="formularioJp/js/comprobar.js"></script>
+    <!-- La encriptación -->
+    <script src="formularioJp/js/md5.min.js"></script>
+    <!-- js de las sweet alert Jp Sena -->
+    <script src="formularioJp/js/sweetalert2.js"></script>
+    <!-- validación formulario -->
+    <script type="text/javascript" src="formularioJp/js/validarjs.js"></script>
+
+
+</head>
+<body>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="well well-sm">
+                <form name = 'formulin3' action="" id= 'formulin3' class="login100-form " method="post">
+                    <br>
+                    <br>
+                    <br>
+                    <fieldset>
+
+                        <br>
+                        <br>
+
+                        <h1 class="text-center header" id="titu"> Recuperar Contraseña </h1>
+                        <!-- Componentes del Formulario Validación de Correo Jp Sena -->
+                        <!-- Botón correo Jp Sena -->
+                        <div class="form-group">
+                            <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
+                            <div class="col-md-8" id="corrcent">
+                                <input id="correo" name="correo" type="email" placeholder="Ingresa Correo" class="form-control text-center" oninput="validar('correo')"required>
+                            </div>
+                        </div>
+
+                       <!-- El botón del formulario para validar el correo JP Sena-->
+                        <!-- El botón del formulario para retornar a registro JP Sena-->
+                        <div class="form-group">
+                            <div class="col-md-12 text-center">
+                                <button type="button" onclick="comprobar()" class="btn btn-default" id="bon1">Validar</button>
+                                <button type="button" class="btn btn-default " onclick = "location='Login.html'" id="bon2">Intentar de Nuevo</button>
+
+                            </div>
+
+                        </div>
+                    </fieldset>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Optional JavaScript -->
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+</body>
+</html>

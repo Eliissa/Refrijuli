@@ -1,0 +1,47 @@
+body{
+  background-color: #94D8F4;
+}
+label{
+    font-weight: bold;
+}
+
+#fechaIngreso{
+    background-color: #F5E5D5;
+}
+#fechaCaducidad{
+    background-color: #F5E5D5;
+}
+#button1id{
+    background-color: #4D56C1;
+}
+#button2id{
+    background-color: #4D56C1;
+}
+#button3id{
+    background-color: #4D56C1;
+}
+
+fieldset {
+    border:1px solid #999;
+    border-radius:8px;
+    box-shadow:0 0 10px #999;
+    background-color: whitesmoke;
+}
+
+
+#table{
+    border:1px solid #999;
+    border-radius:8px;
+    box-shadow:0 0 10px #999;
+    background-color: whitesmoke;
+}
+nav{
+    background-color: #dc3545;
+
+
+
+}
+a{
+    color: whitesmoke;
+
+}

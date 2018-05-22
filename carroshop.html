@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <script src="formularioJp/js/sumar.js"></script>
+    <link rel="stylesheet" href="css/shop.css">
+
+
+</head>
+<body>
+
+<nav class="navbar navbar-light" style="background-color: #F4421F;">
+    <!--Barra de Menu-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Refrijuli</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Nuestra Fábrica <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Clientes</a>
+                </li>
+                <!-- menu para categorías de productos-->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Tipos de Refrigerios
+                    </a>
+
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Fríos</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Calientes</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Dulces</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Salados</a>
+                    </div>
+
+
+
+                </li>
+                <!-- imagen carrito de compra-->
+                <li class="nav-item">
+                    <img src="img/cart.png" width="40">  </img>
+                    <!-- contador para los productos -->
+                    <span class="badge" id="contador">0</span>
+                </li>
+                <li>
+
+                </li>
+            </ul>
+            <!-- botón para la búsqueda-->
+
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Busque su preferido" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="button" data-toggle="popover" title="Popover title"
+                        data-content="Right?">Refrigerios</button>
+            </form>
+
+            <h4>  <a href="index.html">&nbsp; Salir</a></h4>
+        </div>
+    </nav>
+    <h1>Compras</h1>
+</nav>
+<!-- Tabla de catalogo-->
+<div class= "container-fluid" id="texto">
+    <table class="table table-hover"  >
+        <thead>
+        <!--tr es fila-->
+        <!--fila uno-->
+        <tr>
+            <th scope="row">Código</th>
+            <th scope="row"></th>
+            <th scope="row">Nombre</th>
+            <th scope="row">Precio x Und.$</th>
+            <th scope="row">Seleccionar</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!--fila 2-->
+        <tr>
+            <th scope="row">1</th>
+            <th scope="col">
+                <img src="img/item-1.png" width="60">  </img>
+            </th>
+            <td>Refrifrito</td>
+            <td id="cantidad1">40000</td>
+</div>
+
+</td>
+<!--checkbox 1-->
+<td>
+    <input type="checkbox" onclick="insertar1()" id="boton1">
+    <img src="img/cart2.png" width="30">  </img>
+
+</td>
+</tr>
+<!--fila 3-->
+<tr>
+    <th scope="row">2</th>
+    <th scope="col">
+        <img src="img/item-2.png" width="40">  </img>
+    </th>
+    <td>Refritent</td>
+    <td scope="row" id="cantidad2">30000</td>
+    <!--check box2-->
+    <td>
+        <input type="checkbox" aria-label="" id="boton2"onclick="insertar2()" >
+        <img src="img/cart2.png" width="30">  </img>
+    </td>
+</tr>
+<!--el comando colspan="" es para que tome dos celdas, se expanda-->
+<!--fila 4-->
+<!--th celda negrita , td sencilla-->
+<tr>
+    <th scope="row">3</th>
+    <th scope="col">
+        <img src="img/item-3.png" width="60">  </img>
+    </th>
+    <td scope="row">Refrifrut</td>
+    <td scope="row" id="cantidad3">50000</td>
+    <!--check box3-->
+
+    <td>
+        <input type="checkbox" aria-label="" id="boton3" onclick="sumar()">
+        <img src="img/cart2.png" width="30">  </img>
+    </td>
+</tr>
+
+
+<!--fila total-->
+<tr>
+    <th scope="row"></th>
+    <th scope="col"></th>
+    <th scope="row">TOTAL</th>
+    <!--celda para sumatoria-->
+    <th scope="row" id="total"></th>
+    <td>
+        <button type="button" class="btn btn-light" onclick="location='registro.html'">Pagar</button>
+    </td>
+</tr>
+
+</tbody>
+</table>
+</div>
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+</body>
+</html>

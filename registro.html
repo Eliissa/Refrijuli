@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Validación de pedido!</title>
+    <link rel="stylesheet" href="landing/assets/css/myCss.css">
+    <script src="landing/assets/js/validar.js"></script>
+    <link rel="stylesheet" href="css/pago.css">
+</head>
+
+<body id="pago">
+<div >
+    <form action="metodoPago.html" class="formulario" onsubmit="return validar()" method="get">
+       <h1 class="titulo">¡Validación de su pedido!</h1>
+       <br>
+        <input type="text" class="inputs_texto" id="nombre" >
+        <label for="nombre" class="formulario_label">Nombre</label>
+        <input type="text" class="inputs_texto" id="apellido" >
+        <label for="apellido" class="formulario_label">Apellido</label>
+        <input type="text" class="inputs_texto"  id="usuario" required>
+        <label for="usuario" class="formulario_label">Usuario</label>
+        <input type="password" class="inputs_texto" id="contraseña" required>
+        <label for="contraseña" class="formulario_label">Contraseña</label>
+        <input type="email" class="inputs_texto" id="correo" >
+        <label for="correo" class="formulario_label">Correo Electronico</label>
+        <input type="text" class="inputs_texto" id="direccion" >
+        <label for="direccion" class="formulario_label">Dirección de entrega</label>
+        <button type="submit" class="enviar_datos" onclick="location.href='metodoPago.html'">¡Correcto!</button>
+    </form>
+</div>
+<script src="landing/assets/js/myJavaScript.js"></script>
+<script src="landing/assets/js/md5.min.js"></script>
+</body>
+</html>
